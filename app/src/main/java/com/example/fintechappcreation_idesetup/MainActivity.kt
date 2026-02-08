@@ -1,6 +1,5 @@
 package com.example.fintechappcreation_idesetup
 
-import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -16,15 +15,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val tvMessage = findViewById<TextView>(R.id.tvMessage)
+        val btnShowText = findViewById<Button>(R.id.btnShowText)
 
-        val btnShowText = findViewById<Button>(R.id.btnChangeText)
         btnShowText.setOnClickListener {
             tvMessage.setText(R.string.goodbye_world)
-        }
-
-        val btnChangeTextColor = findViewById<Button>(R.id.btnChangeTextColor)
-        btnChangeTextColor.setOnClickListener {
-            tvMessage.setTextColor(Color.RED)
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
